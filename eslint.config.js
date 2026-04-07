@@ -5,30 +5,29 @@ import globals from "globals";
 
 export default [
   {
+    ignores: ["dist/**"],
+  },
+  {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
-        project: "./tsconfig.json"
       },
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     plugins: {
       prettier: prettierPlugin,
-      "@typescript-eslint": tsPlugin
+      "@typescript-eslint": tsPlugin,
     },
     rules: {
       "prettier/prettier": "error",
       "max-len": ["warn", 70, 2, { ignoreComments: true }],
-      "@typescript-eslint/no-unused-vars": "error"
-    }
-  }
+      "@typescript-eslint/no-unused-vars": "error",
+    },
+  },
 ];
-
-
-

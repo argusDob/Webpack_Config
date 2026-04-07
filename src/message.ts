@@ -1,3 +1,4 @@
 export function getMessage() {
-    return "Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!";
+  // eslint-disable-next-line max-len
+  return "Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!Hello from module!";
 }
